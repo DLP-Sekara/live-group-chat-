@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -8,21 +9,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #72a5f7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.chatForm">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #72a5f7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.serverForm">
    <children>
       <AnchorPane layoutX="1355.0" layoutY="265.0" prefHeight="718.0" prefWidth="528.0" style="-fx-background-color: #c4c4c4; -fx-background-radius: 10;">
          <children>
             <AnchorPane layoutY="46.0" prefHeight="593.0" prefWidth="528.0" style="-fx-background-color: white;">
                <children>
-                  <TextArea fx:id="chatArea" layoutX="1.0" layoutY="-1.0" prefHeight="593.0" prefWidth="528.0" style="-fx-background-color: white;">
+                  <TextArea fx:id="serverChatArea" layoutX="1.0" layoutY="-1.0" prefHeight="593.0" prefWidth="528.0" style="-fx-background-color: white;">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </TextArea>
                </children>
             </AnchorPane>
-            <TextField fx:id="chatTxtField" layoutX="36.0" layoutY="661.0" prefHeight="41.0" prefWidth="402.0" />
-            <ImageView fx:id="sendBtn" fitHeight="48.0" fitWidth="49.0" layoutX="471.0" layoutY="660.0" onMouseClicked="#sendOnAction" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="serverChatTxtField" layoutX="36.0" layoutY="661.0" prefHeight="41.0" prefWidth="402.0" />
+            <ImageView fx:id="serverSendBtn" fitHeight="48.0" fitWidth="49.0" layoutX="471.0" layoutY="660.0" onMouseClicked="#serverSendOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/send.png" />
                </image>
@@ -64,5 +65,10 @@
             </ImageView>
          </children>
       </AnchorPane>
+      <Label layoutX="28.0" layoutY="22.0" text="SERVER">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
