@@ -48,5 +48,6 @@ public class serverForm {
         printWriter.println(serverChatTxtField.getText());
         printWriter.flush();
         serverChatArea.appendText("\n"+serverChatTxtField.getText());
+        serverChatTxtField.clear();
     }
 }

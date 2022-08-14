@@ -20,7 +20,7 @@ public class AppInitializer extends Application {
         Scene scene = new Scene(load);
         primaryStage.setTitle("Live Chat");
         primaryStage.setScene(scene);
-        primaryStage.setMaximized(true);
+        //primaryStage.setMaximized(true);
         primaryStage.show();
     }
 }

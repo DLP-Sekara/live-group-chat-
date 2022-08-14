@@ -42,5 +42,6 @@ public class chatForm {
         printWriter.println(chatTxtField.getText());
         printWriter.flush();
         chatArea.appendText("\n"+chatTxtField.getText());
+        chatTxtField.clear();
     }
 }
