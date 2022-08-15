@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #72a5f7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.chatForm">
+<AnchorPane fx:id="chatPage" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #72a5f7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.lahiruForm">
    <children>
       <AnchorPane layoutX="1355.0" layoutY="265.0" prefHeight="718.0" prefWidth="528.0" style="-fx-background-color: #c4c4c4; -fx-background-radius: 10;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
          <children>
@@ -22,6 +23,7 @@
                </children>
             </AnchorPane>
             <TextField fx:id="chatTxtField" layoutX="36.0" layoutY="661.0" prefHeight="41.0" prefWidth="402.0" />
+
             <ImageView fx:id="sendBtn" fitHeight="48.0" fitWidth="49.0" layoutX="471.0" layoutY="660.0" onMouseClicked="#sendOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/send.png" />
@@ -30,7 +32,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="487.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="487.0" layoutY="6.0" onMouseClicked="#closeChatOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/close.png" />
                </image>
@@ -38,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="438.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="minimizedBtn" fitHeight="31.0" fitWidth="33.0" layoutX="438.0" layoutY="15.0" onMouseClicked="#minimizeOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/minimize.png" />
                </image>
@@ -46,7 +48,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="42.0" layoutX="4.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="31.0" fitWidth="42.0" layoutX="4.0" layoutY="668.0" onMouseClicked="#setEmojiOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/emoji.png" />
                </image>
@@ -54,7 +56,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="42.0" layoutX="438.0" layoutY="669.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="31.0" fitWidth="42.0" layoutX="438.0" layoutY="669.0" onMouseClicked="#setImageOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/attachment.png" />
                </image>
@@ -62,6 +64,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
+            <Label fx:id="clientName" layoutX="18.0" layoutY="8.0" text="lahiru">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
