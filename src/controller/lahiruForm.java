@@ -14,13 +14,16 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 //import model.Client;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.Socket;
 import java.net.URL;
+import java.nio.ByteBuffer;
 import java.util.Scanner;
 
 public class lahiruForm {
-    public AnchorPane anchorPane;
     public TextArea chatArea;
     public TextField chatTxtField;
     public ImageView sendBtn;
@@ -82,12 +85,18 @@ public class lahiruForm {
         emojiArea.setVisible(true);
     }
 
-    public void setImageOnAction(MouseEvent mouseEvent) {
-        Stage stage = (Stage) anchorPane.getScene().getWindow();
-
+    public void setImageOnAction(MouseEvent mouseEvent) throws IOException, InterruptedException {
+            try {
+        Stage stage = (Stage) chatPage.getScene().getWindow();
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select an image ");
         File selectedImage = fileChooser.showOpenDialog(stage);
+        System.out.println(selectedImage);
+        socket.close();
+            }catch (Exception e){
+                throw  new RuntimeException(e);
+            }
+
     }
 
     public void style1OnAction(MouseEvent mouseEvent) {
