@@ -28,12 +28,19 @@ public class bimalForm {
     public ImageView minimizedBtn;
     public Label clientName;
     final int PORT =5000;
+    public AnchorPane emojiArea;
+    public ImageView style1;
+    public ImageView style2;
+    public ImageView style3;
+    public ImageView style4;
+    public ImageView style5;
     Socket socket;
     DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;
     String message = "";
     public void initialize() throws IOException {
         chatArea.setEditable(false);
+        emojiArea.setVisible(false);
         new Thread(()->{
             try {
                 socket=new Socket("localhost",5002);
@@ -73,6 +80,7 @@ public class bimalForm {
     }
 
     public void setEmojiOnAction(MouseEvent mouseEvent) {
+        emojiArea.setVisible(true);
     }
 
     public void setImageOnAction(MouseEvent mouseEvent) {
@@ -81,6 +89,30 @@ public class bimalForm {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select an image ");
         File selectedImage = fileChooser.showOpenDialog(stage);
+    }
+
+    public void style1OnAction(MouseEvent mouseEvent) {
+        chatTxtField.appendText("\uD83D\uDE0D");
+    }
+
+    public void style2OnAction(MouseEvent mouseEvent) {
+        chatTxtField.appendText("\uD83D\uDE0E");
+    }
+
+    public void style3OnAction(MouseEvent mouseEvent) {
+        chatTxtField.appendText("\uD83D\uDE09");
+    }
+
+    public void style4OnAction(MouseEvent mouseEvent) {
+        chatTxtField.appendText("\uD83D\uDE2A");
+    }
+
+    public void style5OnAction(MouseEvent mouseEvent) {
+        chatTxtField.appendText("\uD83D\uDE07");
+    }
+
+    public void collapseOnAction(MouseEvent mouseEvent) {
+        emojiArea.setVisible(false);
     }
 }
 
