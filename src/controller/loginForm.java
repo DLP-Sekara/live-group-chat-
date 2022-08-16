@@ -27,20 +27,20 @@ public class loginForm {
             Stage window = (Stage) loginPage.getScene().getWindow();
             window.setTitle("Live Chat");
             window.setScene(new Scene(load));
-        }
-        if(usernameTxtField.getText().equals("pasan")){
+        }else if(usernameTxtField.getText().equals("pasan")){
             URL resource = getClass().getResource("../view/pasan.fxml");
             Parent load = FXMLLoader.load(resource);
             Stage window = (Stage) loginPage.getScene().getWindow();
             window.setTitle("Live Chat");
             window.setScene(new Scene(load));
-        }
-        if(usernameTxtField.getText().equals("bimal")){
+        }else if(usernameTxtField.getText().equals("bimal")){
             URL resource = getClass().getResource("../view/bimal.fxml");
             Parent load = FXMLLoader.load(resource);
             Stage window = (Stage) loginPage.getScene().getWindow();
             window.setTitle("Live Chat");
             window.setScene(new Scene(load));
+        }else{
+            System.out.println("no such client");
         }
         /*URL resource = getClass().getResource("../view/lahiru.fxml");
         Parent load = FXMLLoader.load(resource);

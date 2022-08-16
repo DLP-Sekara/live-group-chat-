@@ -61,12 +61,9 @@ public class bimalForm {
     }
 
     public void closeChatOnAction(MouseEvent mouseEvent) throws IOException {
-        URL resource = getClass().getResource("../view/loginPage.fxml");
-        Parent load = FXMLLoader.load(resource);
+
         Stage window = (Stage) chatPage.getScene().getWindow();
-        window.setTitle("Live Chat");
-        window.setMaximized(true);
-        window.setScene(new Scene(load));
+        window.close();
     }
 
     public void minimizeOnAction(MouseEvent mouseEvent) {

@@ -12,7 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import model.Client;
+//import model.Client;
 
 import java.io.*;
 import java.net.Socket;
@@ -61,12 +61,8 @@ public class lahiruForm {
     }
 
     public void closeChatOnAction(MouseEvent mouseEvent) throws IOException {
-        URL resource = getClass().getResource("../view/loginPage.fxml");
-        Parent load = FXMLLoader.load(resource);
         Stage window = (Stage) chatPage.getScene().getWindow();
-        window.setTitle("Live Chat");
-        window.setMaximized(true);
-        window.setScene(new Scene(load));
+        window.close();
     }
 
     public void minimizeOnAction(MouseEvent mouseEvent) {
