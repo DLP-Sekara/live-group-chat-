@@ -25,15 +25,6 @@ public class serverForm {
 
     Socket accept =null;
 
-    /*private static void closeConnection(DataOutputStream outputStream, DataInputStream inputStream, Socket socket, ServerSocket serverSocket) throws IOException {
-        //close streams
-        outputStream.close();
-        inputStream.close();
-
-        socket.close();
-        serverSocket.close();
-    }*/
-
     public static void main(String[] args) {
         System.out.println("======server started======");
 
